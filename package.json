@@ -33,7 +33,7 @@
     "keywords": [],
     "author": "FeenA <feena0813@gmail.com>",
     "description": "使用baidupcs-go,在baidupcs-batch-upload的基础上进行bug修改和私人定制化",
-    "repository": "git+https://github.com/Fee1A/baidupcs-batch-upload ",
+    "repository": "git+https://github.com/Fee1A/baidupcs-batch-upload",
     "bugs": {
         "url": "https://github.com/Fee1A/baidupcs-batch-upload/issues"
     },
