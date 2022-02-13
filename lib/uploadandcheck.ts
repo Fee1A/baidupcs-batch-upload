@@ -2,6 +2,7 @@ import { checkexist } from "./checkexist.js";
 import path, { posix } from "path";
 import { upload } from "./upload.js";
 import { retryupload } from "./retryupload.js";
+import { unlink } from 'fs';
 
 export async function uploadandcheck(
     file: string,
@@ -47,6 +48,11 @@ export async function uploadandcheck(
         const endtime = Date.now();
         const durtime = (endtime - starttime) / 1000;
         console.log("用时" + durtime + "秒");
+        // 上传成功后删除本地文件
+        unlink(file, (err) => {
+          if (err) throw err
+          console.log(`${file}删除成功`)
+        })
         return;
     } else {
         console.warn(
