@@ -11,7 +11,7 @@ export async function uploadandcheck(
     const inputbase = path.basename(file);
     const remotefile = posix.join(destination, inputbase);
 
-    if (Math.random() > 0.5) {
+    if (true || Math.random() > 0.5) {
         const starttime = Date.now();
         const fileexist = await checkexist(remotefile);
 

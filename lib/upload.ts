@@ -31,7 +31,7 @@ export async function upload(file: string, destination: string): Promise<void> {
     }
     try {
         result = await baidupcsupload(file, destination);
-    } catch (error) {
+    } catch (error: any) {
         const { stdout, stderr, code } = error;
         console.error(error);
         console.error(JSON.stringify({ stdout, stderr }, null, 4));
